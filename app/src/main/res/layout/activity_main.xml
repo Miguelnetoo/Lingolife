@@ -1,0 +1,334 @@
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/azulsite"
+        android:padding="16dp">
+
+        <!-- Logo ImageView -->
+
+        <!-- Alterado para abaixo da logo -->
+
+        <!-- Alterado para abaixo da logo -->
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="101dp"
+            android:layout_height="76dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="16dp"
+            android:contentDescription="Logo"
+            android:src="@drawable/logo1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btnLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="@color/roxoescuro"
+            android:text="Entrar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btnRegister"
+            android:layout_width="142dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="@color/roxoescuro"
+            android:text="Criar Conta"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/btnLogin"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <FrameLayout
+            android:id="@+id/frameLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btnRegister">
+
+        </FrameLayout>
+
+        <ImageView
+            android:id="@+id/banner_image"
+            android:layout_width="379dp"
+            android:layout_height="241dp"
+            android:layout_marginTop="12dp"
+            android:contentDescription="Banner Image"
+            android:scaleType="centerCrop"
+            android:src="@drawable/banner"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.459"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/logo"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/text_home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="136dp"
+            android:background="@android:color/transparent"
+            android:text="Bem-vindo ao LingoLife\nConectando Mentes \ne Linguagens!"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/banner_image"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.063"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/frameLayout"
+            app:layout_constraintVertical_bias="0.206" />
+
+        <LinearLayout
+            android:id="@+id/language_selection_container"
+            android:layout_width="414dp"
+            android:layout_height="207dp"
+            android:layout_marginTop="12dp"
+            android:background="@color/cinza"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/banner_image"
+            tools:ignore="NotSibling">
+
+            <TextView
+                android:id="@+id/language_selection_text"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:text="Escolha seu idioma"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:id="@+id/language_options"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/cinza"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/option_english"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_margin="8dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ingles" />
+
+                <ImageView
+                    android:id="@+id/option_spanish"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_margin="8dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/espanhol" />
+
+                <ImageView
+                    android:id="@+id/option_french"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_margin="8dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/frances" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/additional_image"
+            android:layout_width="175dp"
+            android:layout_height="178dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="24dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/photo1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/language_selection_container" />
+
+        <TextView
+            android:id="@+id/additional_text"
+            android:layout_width="173dp"
+            android:layout_height="167dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="36dp"
+            android:gravity="center"
+            android:text="No LingoLife crie seu perfil destacando suas habilidades e metas Utilize nosso sistema de correspondência inteligente para encontrar parceiros de estudo."
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/additional_image"
+            app:layout_constraintTop_toBottomOf="@+id/language_selection_container" />
+
+        <ImageView
+            android:id="@+id/additional_image1"
+            android:layout_width="393dp"
+            android:layout_height="253dp"
+            android:layout_marginTop="28dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/photo2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.512"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/additional_text" />
+
+        <ImageView
+            android:id="@+id/additional_image2"
+            android:layout_width="394dp"
+            android:layout_height="240dp"
+            android:layout_marginTop="4dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/photo3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.428"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/additional_image1" />
+
+        <LinearLayout
+            android:id="@+id/objectives_section"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:background="@android:color/white"
+            app:layout_constraintTop_toBottomOf="@id/additional_image2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <!-- Título -->
+            <TextView
+                android:id="@+id/objectives_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Quais são seus objetivos"
+                android:textColor="@android:color/black"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:layout_gravity="center" />
+
+            <!-- Subtítulo -->
+            <TextView
+                android:id="@+id/objectives_subtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Escolha e acesse assuntos específicos"
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:layout_marginTop="8dp" />
+
+
+            <LinearLayout
+                android:id="@+id/options_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <!-- Opção Trabalho -->
+                <TextView
+                    android:id="@+id/option_work"
+                    android:layout_width="208dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:background="#4F4F4F"
+                    android:gravity="center"
+                    android:padding="16dp"
+                    android:text="Trabalho"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <!-- Opção Viagem -->
+                <TextView
+                    android:id="@+id/option_travel"
+                    android:layout_width="216dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:background="@color/roxoescuro"
+                    android:gravity="center"
+                    android:padding="16dp"
+                    android:text="Viagem"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <!-- Opção Diversão -->
+                <TextView
+                    android:id="@+id/option_fun"
+                    android:layout_width="208dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:background="@color/roxoescuro"
+                    android:gravity="center"
+                    android:padding="16dp"
+                    android:text="Diversão"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/footer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginTop="24dp"
+                android:padding="16dp"
+                android:background="@color/roxoescuro"
+                app:layout_constraintTop_toBottomOf="@id/objectives_section">
+
+                <!-- Logo pequena do lado esquerdo -->
+                <ImageView
+                    android:id="@+id/footer_logo"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/logo1"
+                    android:layout_gravity="start"
+                    android:contentDescription="Logo Pequena" />
+
+                <!-- Texto do lado direito -->
+                <TextView
+                    android:id="@+id/footer_text"
+                    android:layout_width="264dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:text="LingoLife © Copyright 2024. All Rights Reserved."
+                    android:textColor="@android:color/white"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
